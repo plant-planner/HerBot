@@ -1,11 +1,15 @@
-# plantPlanner
-### Create your garden with this awesome Plant planner Application
+## plantPlanner
+Create your garden with this awesome Plant planner Application
 
-Pages We need:
+### Pages We need:
 * Homepage - with search and filters
 * Userprofile
   * Register
   * Login
-  * Success on login and subscription
+  * Success on login and subscription (Popup)
   * Logout
   * Favorite Plants
+
+
+## Introtxt:
+Improve your garden.
