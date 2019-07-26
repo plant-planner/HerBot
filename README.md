@@ -11,5 +11,17 @@ Create your garden with this awesome Plant planner Application
   * Favorite Plants
 
 
+
+## Models we need
+* Users
+* Plants
+* {Comments}
+
+
+## What we need
+* Database
+* API
+* Json from Google
+
 ## Introtxt:
 Improve your garden.
