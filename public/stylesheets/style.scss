@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700&display=swap');
 
 $global-padding: .5rem;
+$green: #73AC6B;
+$herbot-white: #FFFDF1;
+
 
 body,html {
   padding: 0px;
   margin: 0px;
   font-size: 14px;
   font-family:  "barlow", Helvetica, Arial, sans-serif;
-  background: #fafafa;
+  background: $herbot-white;
 
 }
-
-
 
 a {
   color: green;
@@ -30,9 +31,14 @@ a {
   justify-content: center;
   width: 100%;
   font-size: 1.2rem;
-  background: #73AC6B;
+  background: $green;
   padding: $global-padding;
   margin: 0;
+
+  .logo{
+    width: 200px;
+    position: relative;
+  }
   
   a{
     text-decoration: none;
@@ -47,7 +53,7 @@ a {
     justify-content: space-around;
   
     li {
-
+      
     }
   }
 
