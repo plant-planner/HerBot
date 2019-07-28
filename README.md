@@ -18,9 +18,8 @@ Create your garden with this awesome Plant planner Application
 
 
 ## What we need
-* Database
 * API
-* Json from Google
+
 
 ## Introtxt:
 Improve your garden.
