@@ -28,3 +28,9 @@ Explore the world of herbs
 ## Nice to have
 * {Comments}
 * {REcipe API} Showing the 3 most popular recipes with this herb
+
+
+## WARNING !
+
+* color
+* favorite
