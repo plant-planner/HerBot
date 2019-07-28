@@ -10,19 +10,16 @@ Discover new herbs
   * Logout
   * Favorite Herbs
 
+## Models
+* connect them
 
-## Models we need
-* Users
-* Herbs
-* Favourites
+## User
+* Register
+* Login
+* Enrypt password
 
-
-## What we need
-* API
-
-
-## Introtxt:
-Explore the world of herbs
+## Issues
+* imgURL on the public folder not working
 
 
 ## Nice to have
@@ -31,6 +28,4 @@ Explore the world of herbs
 
 
 ## WARNING !
-
-* color
-* favorite
+Use American naming convention for COLOR and FAVORITES
