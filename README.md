@@ -1,5 +1,5 @@
-## plantPlanner
-Create your garden with this awesome Plant planner Application
+## Herbot
+Discover new herbs
 
 ### Pages We need:
 * Homepage - with search and filters
@@ -8,13 +8,13 @@ Create your garden with this awesome Plant planner Application
   * Login
   * Success on login and subscription (Popup)
   * Logout
-  * Favorite Plants
-
+  * Favorite Herbs
 
 
 ## Models we need
 * Users
-* Plants
+* Herbs
+* Favourites
 
 
 ## What we need
@@ -22,7 +22,8 @@ Create your garden with this awesome Plant planner Application
 
 
 ## Introtxt:
-Improve your garden.
+Explore the world of herbs
+
 
 ## Nice to have
 * {Comments}
