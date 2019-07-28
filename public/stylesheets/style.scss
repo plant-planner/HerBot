@@ -1,9 +1,60 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: #fafafa;
+@import url('https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700&display=swap');
+
+$global-padding: .5rem;
+$green: #73AC6B;
+$herbot-white: #FFFDF1;
+
+
+body,html {
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  font-family:  "barlow", Helvetica, Arial, sans-serif;
+  background: $herbot-white;
+
 }
 
 a {
   color: green;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  padding: $global-padding;
+}
+
+
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.2rem;
+  background: $green;
+  padding: $global-padding;
+  margin: 0;
+
+  .logo{
+    width: 200px;
+    position: relative;
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-around;
+  
+    li {
+      
+    }
+  }
+
 }
