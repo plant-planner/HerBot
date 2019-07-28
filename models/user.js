@@ -7,8 +7,10 @@ const userSchema = new Schema({
       type: String,
       required: [true, "You need to provide a username"]
     },
-
-
+    password: {
+      type: String,
+      required: [true, "You need to have a password"]
+    }
     });
 
 module.exports = mongoose.model("User", userSchema)

@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 // Here we set up our Models with Schema
 const favoriteSchema = new Schema({
-    favorites: [ ],
+    //This is gonna be an array of ObjectIDs from Herbs 
     });
 
 module.exports = mongoose.model("Favorite", favoriteSchema)

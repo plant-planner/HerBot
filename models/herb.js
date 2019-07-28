@@ -6,7 +6,8 @@ const herbSchema = new Schema({
     title: {
       type: String,
       required: [true, "You need to give your Herb a title"],
-    }
+    },
+    
     });
 
 module.exports = mongoose.model("Herb", herbSchema)
