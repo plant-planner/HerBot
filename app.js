@@ -12,7 +12,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 
 mongoose
-  .connect('mongodb://localhost/plantplanner', {useNewUrlParser: true})
+  .connect(process.env.MONGO_PASS, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -50,6 +50,9 @@ app.locals.title = 'herbot';
 
 const index = require('./routes/index');
 app.use('/', index);
+
+const member = require('./routes/member');
+app.use('/member', member);
 
 
 module.exports = app;
