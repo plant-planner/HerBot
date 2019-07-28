@@ -15,7 +15,6 @@ Create your garden with this awesome Plant planner Application
 ## Models we need
 * Users
 * Plants
-* {Comments}
 
 
 ## What we need
@@ -25,3 +24,7 @@ Create your garden with this awesome Plant planner Application
 
 ## Introtxt:
 Improve your garden.
+
+## Nice to have
+* {Comments}
+* {REcipe API} Showing the 3 most popular recipes with this herb
