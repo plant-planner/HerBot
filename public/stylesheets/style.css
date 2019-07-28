@@ -1,8 +1,39 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+@import url("https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700&display=swap");
+body, html {
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  font-family: "barlow", Helvetica, Arial, sans-serif;
+  background: #FFFDF1; }
 
 a {
-  color: #00B7FF; }
+  color: green; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem; }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.2rem;
+  background: #73AC6B;
+  padding: 0.5rem;
+  margin: 0; }
+  .header .logo {
+    width: 200px;
+    position: relative; }
+  .header a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold; }
+  .header ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-around; }
 
 /*# sourceMappingURL=style.css.map */
