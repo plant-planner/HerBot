@@ -6,6 +6,7 @@ const User = require('../models/User');
 router.get('/signup', (req, res, next) => {
   User.find({})
   .then((user)=>{
+    debugger
     res.render('signup', {user});
   })
 
