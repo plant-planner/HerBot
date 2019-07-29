@@ -18,6 +18,7 @@ Discover new herbs
 * Enrypt password
 * Using handlebars to display and hide Nav-items like Login and Signup.
 * Creating success and error popups.
+* Check if username are available.
 
 ## Nice to have
 * {Comments}
