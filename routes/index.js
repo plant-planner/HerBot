@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 
 /* GET home page */
 router.get('/', (req, res, next) => {
+
   Herb.find({})
   .then((herbs) => {
     res.render('index', {herbs});
@@ -15,8 +16,15 @@ router.get('/', (req, res, next) => {
 });
 
 /* GET Single Herb Detail */
-router.get('/herb', (req, res, next) => {
-  res.render('herb');
+router.get('/herb/:id', (req, res, next) => {
+  Herb.findById(req.params.id)
+  // .populate("creator")
+  .then((herb) => {
+    res.render("herb", {herb});
+  })
+  .catch((err) => {
+    res.send("Error in herb-detail route")
+  })
 });
 
 
