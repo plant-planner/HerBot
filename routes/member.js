@@ -2,37 +2,37 @@ const express = require('express');
 const router  = express.Router();
 const User = require('../models/User');
 
+
 // Creating a user
 router.get('/signup', (req, res, next) => {
   User.find({})
-  .then((user)=>{
-    debugger
+  .then((user)=> {
     res.render('signup', {user});
   })
-
+  
   .catch((error)=>{
     next();
   })
 });
 
 // POSTING the user data to the MongoDB
-router.post('/signup'), (req, res, next) => {
+router.post('/signup', (req, res, next) => {
+
   let newUser = {
     username: req.body.username,
     password: req.body.password
   };
 
   User.create(newUser)
-    .then((user)=>{
-      debugger
-      res.render('login');
+    .then((user)=> {
+      res.render('login'), {user} ;
     })
 
-    .catch((error)=>{
+    .catch((error)=> {
       next();
     })
+})
 
-}
 
 // Login for users
 router.get('/login', (req, res, next) => {
@@ -47,6 +47,17 @@ router.get('/login', (req, res, next) => {
 
 });
 
+// POSTING user data when logging in
+router.post('/login', (req, res, next) => {
+  User.find({})
+    .then((user)=> {
+      res.render('profile'), {user} ;
+    })
+
+    .catch((error)=> {
+      next();
+    })
+})
 
 // Listing userfavorites
 router.get('/favorites', (req, res, next) => {
@@ -54,10 +65,13 @@ router.get('/favorites', (req, res, next) => {
 });
 
 // Showing userprofiles
-
 router.get('/profile', (req, res, next) => {
   res.render('profile');
 });
 
+// Logging out
+router.get('/logout', (req, res, next) => {
+  res.render('logout');
+});
 
 module.exports = router;
