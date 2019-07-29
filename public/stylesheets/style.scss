@@ -137,10 +137,11 @@ button {
   flex-direction: column;
   border: 1px solid black;
   width: 40%;
+}
 
 // Styling for footer
 
-footer{
+footer {
   position: fixed;
   display: flex;
   align-items: center;
@@ -153,16 +154,13 @@ footer{
   background: #fff;
   display: flex;
 
-  ul{
+  ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
     width: 100%;
     margin: 0;
     padding: 0;
-    li{
-
-    }
   }
 
 }

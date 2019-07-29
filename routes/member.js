@@ -24,6 +24,7 @@ router.post('/signup'), (req, res, next) => {
 
   User.create(newUser)
     .then((user)=>{
+      debugger
       res.render('login');
     })
 
