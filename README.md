@@ -1,7 +1,7 @@
 ## Herbot
 Discover new herbs
 
-### Pages We need:
+### Pages We have:
 * Homepage - with search and filters
 * Userprofile
   * Register
@@ -14,18 +14,13 @@ Discover new herbs
 * connect them
 
 ## User
-* Register
-* Login
+* Creating Sessions
 * Enrypt password
-
-## Issues
-* imgURL on the public folder not working
-
+* Using handlebars to display and hide Nav-items like Login and Signup.
+* Creating success and error popups.
 
 ## Nice to have
 * {Comments}
-* {REcipe API} Showing the 3 most popular recipes with this herb
+* {REcipe API} Showing the 3 most popular drinks you can make with this herb.
 
-
-## WARNING !
-Use American naming convention for COLOR and FAVORITES
+## Issues
