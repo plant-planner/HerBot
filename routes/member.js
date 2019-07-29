@@ -59,18 +59,19 @@ router.post('/login', (req, res, next) => {
     })
 })
 
-
-
 // Listing userfavorites
 router.get('/favorites', (req, res, next) => {
   res.render('favorites');
 });
 
 // Showing userprofiles
-
 router.get('/profile', (req, res, next) => {
   res.render('profile');
 });
 
+// Logging out
+router.get('/logout', (req, res, next) => {
+  res.render('logout');
+});
 
 module.exports = router;
