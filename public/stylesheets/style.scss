@@ -131,6 +131,13 @@ button {
   max-width: $global-width;
 }
 
+
+.herb-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 40%;
+
 // Styling for footer
 
 footer{
@@ -157,4 +164,5 @@ footer{
 
     }
   }
+
 }
