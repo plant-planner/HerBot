@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Here we set up our Models with Schema
@@ -61,4 +61,6 @@ const herbSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model("Herb", herbSchema)
+const Herb = mongoose.model("Herb", herbSchema);
+
+module.exports = Herb;

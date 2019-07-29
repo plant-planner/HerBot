@@ -79,4 +79,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1.5rem 1.5rem;
   max-width: 960px; }
 
+.herb-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 40%; }
+
 /*# sourceMappingURL=style.css.map */

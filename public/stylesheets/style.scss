@@ -113,3 +113,10 @@ h1, h2, h3, h4, h5, h6{
   margin: $global-margin;
   max-width: $global-width;
 }
+
+.herb-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 40%;
+}
