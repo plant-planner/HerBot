@@ -54,5 +54,9 @@ app.use('/', index);
 const member = require('./routes/member');
 app.use('/member', member);
 
+app.use(function(req,res, next){
+  res.send("There was an error")
+})
+
 
 module.exports = app;
