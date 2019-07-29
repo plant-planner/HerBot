@@ -1,8 +1,14 @@
 {{#each herbs}}
-  
-    <div class="herb-container" style="background-image: url('{{this.image}}')">
-    <a href="/herb/{{this._id}}"><h3>{{this.commonName}}</h3></a>
-    <h4 class="sub-title">{{this.latinName}}</h4>
+    <div class="herb-container">
+        <a href="/herb/{{this._id}}">
+        <div class="herb-image" style="background-image: url('{{this.image}}')">
+            <h2>{{this.commonName}}</h2>
+            <h4 class="sub-title">{{this.latinName}}</h4>
+        </div>
+        </a>
+
+        <div class="description">
+            {{this.description}}
+        </div>
     </div>
-  
 {{/each}}
