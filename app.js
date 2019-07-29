@@ -48,15 +48,11 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 // default value for title local
 app.locals.title = 'herbot';
 
-const index = require('./routes/index');
-app.use('/', index);
-
-const member = require('./routes/member');
-app.use('/member', member);
+app.use('/', require('./routes/index'));
+app.use('/member', require('./routes/member'));
 
 app.use(function(req,res, next){
   res.send("There was an error")
 })
-
 
 module.exports = app;

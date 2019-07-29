@@ -5,7 +5,6 @@ const mongoose = require("mongoose");
 
 /* GET home page */
 router.get('/', (req, res, next) => {
-  debugger
   Herb.find({})
   .then((herbs) => {
     res.render('index', {herbs});
