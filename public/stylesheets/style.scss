@@ -17,13 +17,13 @@ html{
   margin: 0px;
   background: #fff;
 }
-body,html {
+body {
   padding: 0px;
   margin: 0px;
   font-size: 16px;
   line-height: 16px;
   font-family: "barlow", Helvetica, Arial, sans-serif;
-  background: #2d2d2d;
+  background: $dark-gray;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,14 +41,18 @@ p{
 }
 
 a {
-  color: green;
+  color: $green;
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+a:hover{
+  color: darken( $green, 20% );
 }
 
 h1, h2, h3, h4, h5, h6{
   font-family: 'georgia', sans-serif;
   font-weight: 400;
-  font-style: italic;
 }
 
 .sub-title {
@@ -98,19 +102,49 @@ button{
   color: #2d2d2d;
   text-align: center;
 
-  .herb-image{
+  .herb-image {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 30vh;
+    height: 20vh;
     background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    :before{
+      content: '';
+      transition: all 0.5s ease;
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #000000, $alpha: 0.4);
+      z-index: 1;
+
+      a:hover{
+        background: rgba($color: #000000, $alpha: 0);
+      }
+    }
 
 
     h2{
-    text-shadow: 0px 0px 2px rgba(45, 45, 45, 0.25);
+    position: absolute;
+    align-self: center;
+    top: 1rem;
+    // text-shadow: 0px 0px 2px rgba(45, 45, 45, 0.25);
     font-size: 3rem;
     color: #fff;
     line-height: 1rem;
+    z-index: 2;
+    }
+
+    .sub-title{
+      position: absolute;
+      align-self: center;
+      background-color: #000;
+      padding: .3rem;
+      bottom: 0;
+      z-index: 2;
     }
   }
 
@@ -123,6 +157,7 @@ footer{
   position: fixed;
   display: flex;
   align-items: center;
+  z-index: 4;
   bottom: 0;
   left: 0;
   right: 0;

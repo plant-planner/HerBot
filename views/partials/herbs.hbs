@@ -1,7 +1,7 @@
 {{#each herbs}}
     <div class="herb-container">
         <a href="/herb/{{this._id}}">
-        <div class="herb-image" style="background-image: url('{{this.image}}')">
+        <div class="herb-image" href="/herb/{{this._id}}" style="background-image: url('{{this.image}}')">
             <h2>{{this.commonName}}</h2>
             <h4 class="sub-title">{{this.latinName}}</h4>
         </div>
