@@ -47,8 +47,27 @@ h1, h2, h3, h4, h5, h6{
   font-style: italic;
 }
 
+// Inputfields and Buttons
+
+input{
+  background: white;
+  padding: .6rem;
+  margin: .5rem;
+}
+
+button {
+  padding: $global-padding;
+  background: $green;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 3px;
+  border: none;
+}
 
 
+
+// Styling for header
 
 .header{
   position: relative;
@@ -56,9 +75,8 @@ h1, h2, h3, h4, h5, h6{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 6px solid olive;
   width: 100vw;
-  background: $herbot-white;
+  background: white;
   box-sizing: border-box;
   font-size: 1.2rem;
   padding: 1.5rem .5rem 1.5rem .5rem;
@@ -79,9 +97,8 @@ h1, h2, h3, h4, h5, h6{
     text-decoration: none;
     color: $dark-gray;
     font-weight: normal;
-    font-family: 'georgia', sans-serif;
+    font-family: 'barlow', sans-serif;
     font-weight: 400;
-    font-style: italic;
       &:hover{
         color: olive;
       }
@@ -112,4 +129,32 @@ h1, h2, h3, h4, h5, h6{
   padding: $global-padding;
   margin: $global-margin;
   max-width: $global-width;
+}
+
+// Styling for footer
+
+footer{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  width: 100vw;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+
+  ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    li{
+
+    }
+  }
 }
