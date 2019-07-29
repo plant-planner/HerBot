@@ -8,6 +8,7 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
+const User = require('./models/user');
 hbs.registerPartials(__dirname + '/views/partials');
 
 
@@ -15,6 +16,14 @@ mongoose
   .connect(process.env.MONGO_PASS, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+    new User({
+      username: "test",
+      password: "test"
+    }).save().then(user => {
+      console.log(user);
+    }).catch(error => {
+      console.error(error)
+    })
   })
   .catch(err => {
     console.error('Error connecting to mongo', err)
