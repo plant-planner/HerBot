@@ -1,9 +1,9 @@
 <footer class="footer">
   <ul>
     {{!-- <li><a href="/member/favorites">Favorites</a></li> --}}
-    <form>
-    <input type="search" placeholder="Sarch for herbs" name="search">
-    <button>Search</button>
+    <form method="POST" action="/search">
+      <input type="search" placeholder="Search for herbs" name="search">
+      <button type="submit">Search</button>
     </form>
   </ul>
 </div>
