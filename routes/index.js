@@ -1,7 +1,6 @@
 const express = require('express');
 const router  = express.Router();
-const Herb = require ('../models/Herb');
-const mongoose = require("mongoose");
+const Herb    = require ('../models/Herb');
 
 /* GET home page */
 router.get('/', (req, res, next) => {
