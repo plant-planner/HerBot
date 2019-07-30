@@ -1,0 +1,43 @@
+#app-modal{
+  animation: fadeinOut 8s;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  bottom: .5rem;
+  right: .5rem;
+  width: 90%; 
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  padding: .5rem;
+  text-emphasis: center;
+}
+
+.close {
+  color: #2d2d2d;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes fadeinOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1;}
+  100% { opacity: 0;}
+}
+
+

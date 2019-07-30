@@ -1,9 +1,24 @@
 <form action="signup" method="POST">
   <label>Username</label>
-  <input type="email" name="username" placeholder="Your email adress"></input>
+  <input type="email" id="username" name="username" placeholder="Your email adress"></input>
 
   <label>Password</label>
   <input type="password" name="password" placeholder="Choose your super-secret password"></input>
-
+  
   <button type="submit">Sign up</button>
 </form>
+
+<script>
+  document.getElementById("username").addEventListener("blur", function(event) {
+    axios.post("{{host}}:{{port}}/member/signup/username", {
+      username: event.currentTarget.value
+    })
+    .then((response)=>{
+      if(response.status === 409){
+        console.log("error");
+      } else {
+        message("Woooohoooo")
+      }
+    })
+  }) 
+</script>
