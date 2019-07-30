@@ -1,1 +1,15 @@
-<h1>Under construction</h1>
+<h1>Welcome {{username}}</h1>
+
+<script>
+
+const getBreeds = () => {
+  try {
+    return axios.get('{{host}}:{{port}}/member/profile')
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+getBreeds();
+
+</script>

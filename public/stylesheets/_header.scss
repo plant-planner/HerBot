@@ -60,15 +60,15 @@ header{
 
 //  Hamburger menu
 #hamburger-box {
+  position: fixed;
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
   top: 0;
   height: 60%;
   width: 100%;
-  background-color: $herbot-white;
+  background-color: #fff;
   z-index: 9;
   border-radius: 1px;
 
@@ -84,22 +84,21 @@ header{
       &:hover {
         color: olive;
       }
+
+      &:last-of-type {
+        border: none;
+      }
   }
 
-  a:last-of-type {
-    border: none;
-  }
 }
 
 .hamburger-icon  {
-
   z-index: 15;
   i {
     display: block;
-    font-size: 1.8rem;  
+    font-size: 1.9rem;  
+    line-height: 1rem;
   } 
 } 
-
-
 
 }

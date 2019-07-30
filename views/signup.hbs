@@ -1,12 +1,20 @@
+<h1>Sign up</h1>
+<p>With {{title}} you get the best herbs. Phasellus eu mauris convallis lorem cursus maximus. Curabitur porta justo eu dui maximus, quis porta purus accumsan. Suspendisse bibendum enim at varius tristique. Vestibulum ut tristique nisl. Suspendisse non sagittis nisi. Proin nulla ipsum, volutpat quis dolor et, consequat iaculis mi.</p>
 <form action="signup" method="POST">
-  <label>Username</label>
-  <input type="email" id="username" name="username" placeholder="Your email adress"></input>
+  <div class="flex-item">
+    <label>Username</label>
+    <input type="email" id="username" name="username" placeholder="Your email adress"></input>
 
-  <label>Password</label>
-  <input type="password" name="password" placeholder="Choose your super-secret password"></input>
-  
-  <button type="submit">Sign up</button>
+    <label>Password</label>
+    <input type="password" name="password" placeholder="Choose your super-secret password"></input>
+  </div>
+
+    <div class="flex-item"></div>
+      <button disabled type="submit" id="submit" class="gray">Sign up</button>
+    </div>
 </form>
+
+
 
 <script>
   document.getElementById("username").addEventListener("blur", function(event) {
@@ -15,10 +23,14 @@
     })
     .then((response)=>{
       if(response.status === 409){
-        console.log("error");
+        next();
       } else {
-        message("Woooohoooo")
+        document.getElementById("submit").disabled = false;
+        document.getElementById("submit").className = "success";
       }
+    })
+    .catch((error)=>{
+        message("The username is already taken")
     })
   }) 
 </script>

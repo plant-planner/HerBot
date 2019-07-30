@@ -40,15 +40,15 @@ header {
       margin: 0rem 1.3rem 0rem 1.3rem;
       font-size: 1rem; }
   header #hamburger-box {
+    position: fixed;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed;
     top: 0;
     height: 60%;
     width: 100%;
-    background-color: #f5f5f5;
+    background-color: #fff;
     z-index: 9;
     border-radius: 1px; }
     header #hamburger-box a {
@@ -62,13 +62,14 @@ header {
       border-bottom: 1px solid #2d2d2d; }
       header #hamburger-box a:hover {
         color: olive; }
-    header #hamburger-box a:last-of-type {
-      border: none; }
+      header #hamburger-box a:last-of-type {
+        border: none; }
   header .hamburger-icon {
     z-index: 15; }
     header .hamburger-icon i {
       display: block;
-      font-size: 1.8rem; }
+      font-size: 1.9rem;
+      line-height: 1rem; }
 
 #app-modal {
   animation: fadeinOut 8s; }
@@ -83,11 +84,14 @@ header {
   padding: 1rem; }
 
 .modal-content {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #73AC6B;
+  font-weight: bold;
+  font-size: 1.2rem;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   padding: .5rem;
-  text-emphasis: center; }
+  text-align: center; }
 
 .close {
   color: #2d2d2d;
@@ -156,16 +160,19 @@ input {
   border: 1px solid #f4f4f4;
   border-radius: 3px;
   padding: .5rem .8rem;
-  margin: .5rem; }
+  margin: .6rem 0rem; }
 
 button {
   background: #73AC6B;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
-  padding: .3rem 1rem;
+  padding: .5rem .8rem;
+  height: 40px;
   border-radius: 3px;
   border: none; }
+  button.gray {
+    background: gray; }
 
 .center {
   text-align: center; }
@@ -173,10 +180,22 @@ button {
 .wrapper {
   display: flex;
   flex-direction: column;
+  background: #2d2d2d;
+  min-height: 100vh;
   padding: 0.5rem 1.5rem;
   margin: .3rem;
   color: #fff;
+  text-align: center;
   max-width: 960px; }
+  .wrapper form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
+    .wrapper form .flex-item {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem; }
 
 .herb-container {
   display: flex;
