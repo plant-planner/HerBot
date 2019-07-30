@@ -8,10 +8,22 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
-const User = require('./models/User');
+const app          = express();
+
+// Setting upp Sessions for user
+const session = require('express-session')
+
+app.use(session({
+  secret: 'was geht',
+  resave: false,
+  saveUninitialized: true,
+}))
+
+// Register Partials Folder
 hbs.registerPartials(__dirname + '/views/partials');
 
 
+// Connecting to database
 mongoose.connect(process.env.MONGO_PASS, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo Database`)
@@ -23,7 +35,7 @@ mongoose.connect(process.env.MONGO_PASS, {useNewUrlParser: true})
 const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
 
-const app = express();
+
 
 // Middleware Setup
 app.use(logger('dev'));
@@ -48,6 +60,7 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 // default value for title local
 app.locals.title = 'herbot';
 
+// Adding Routes
 app.use('/', require('./routes/index'));
 app.use('/member', require('./routes/member'));
 
