@@ -18,6 +18,7 @@ header{
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
 
   .logo{
+    z-index: 10;
     position: relative;
     padding: .3rem 0 0 1rem;
 
@@ -27,6 +28,7 @@ header{
   }
 
   a{
+   
     transition: all 0.2s ease;
     text-decoration: none;
     color: $dark-gray;
@@ -40,6 +42,7 @@ header{
   }
 
   ul{
+    z-index: 10;
     max-width: $global-width;
     display: flex;
     list-style: none;
@@ -53,5 +56,50 @@ header{
     }
 
   }
+
+
+//  Hamburger menu
+#hamburger-box {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 60%;
+  width: 100%;
+  background-color: $herbot-white;
+  z-index: 9;
+  border-radius: 1px;
+
+  a {
+    padding: 20px 16px;
+    width: 10%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: $dark-gray;
+    font-size: 1.2rem;
+    border-bottom: 1px solid $dark-gray;
+      &:hover {
+        color: olive;
+      }
+  }
+
+  a:last-of-type {
+    border: none;
+  }
+}
+
+.hamburger-icon  {
+
+  z-index: 15;
+  i {
+    display: block;
+    font-size: 1.8rem;  
+  } 
+} 
+
+
 
 }
