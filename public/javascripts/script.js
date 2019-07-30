@@ -1,7 +1,4 @@
-// document.addEventListener('DOMContentLoaded', () => {
-
-// }, false);
-
+// Burger
 function toggleBurger() {
 
     var x = document.getElementById("hamburger-box");

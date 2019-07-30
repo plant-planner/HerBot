@@ -3,6 +3,7 @@ const router  = express.Router();
 const User    = require('../models/User');
 var bcrypt    = require('bcrypt');
 
+
 // Creating a user
 router.get('/signup', (req, res, next) => {
   User.find({})
@@ -15,29 +16,42 @@ router.get('/signup', (req, res, next) => {
   })
 });
 
+router.post('/signup/username', (req,res)=> {
+
+  User.findOne({username: req.body.username})
+    .then((user)=> {
+      if(user){
+        res.status(409).json({message: "username taken"});
+      } else {
+        res.status(200).json({message: "username available"});
+      }
+    })
+    .catch((error)=>{
+      next(new Error(error))
+    })
+})
+
 // POSTING the user data to the MongoDB
 router.post('/signup', (req, res, next) => {
 
   bcrypt.hash(req.body.password, 10, function(err, hash) {
-      
     let newUser = {
       username: req.body.username,
       password: hash
     };
-
-  User.create(newUser)
-    .then(()=> {
-      res.redirect('login') ;
-      if (res.redirect) {
-        document.location.href = res.redirect; 
-      }
-    })
-
-    .catch((error)=> {
-      next();
-    })
-})
-
+    // Checking if username exists  
+    User.findOne({username: req.body.username})
+      .then((user)=> {
+        if(user){
+          next(new Error("Username already taken."));
+        } else {
+          User.create(newUser)
+          .then(()=> {
+            res.redirect('login');
+          })
+        }
+      })
+  })
 });
 
 // Login for users
@@ -64,7 +78,8 @@ router.post('/login', (req, res, next) => {
         if(match) {
           req.session.user = user;
           // Redirecting to profilepage
-          res.render('profile');
+          res.render('profile'), {user};
+          // Changing the url to match the render
 
         } else {
           // Password is not correct
