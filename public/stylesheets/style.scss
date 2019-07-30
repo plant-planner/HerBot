@@ -29,7 +29,6 @@ body {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-
 }
 
 p{
@@ -66,7 +65,7 @@ input{
   border: 1px solid #f4f4f4;
   border-radius: 3px;
   padding: .5rem .8rem;
-  margin: .5rem;
+  margin: .6rem 0rem;
 }
 
 
@@ -75,9 +74,14 @@ button{
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
-  padding: .3rem 1rem;
+  padding: .5rem .8rem;
+  height: 40px;
   border-radius: 3px;
   border: none;
+
+  &.gray{
+    background: gray;
+  }
 }
 
 .center{
@@ -87,10 +91,27 @@ button{
 .wrapper{
   display: flex;
   flex-direction: column;
+  background: #2d2d2d;
+  min-height: 100vh;
   padding: $global-padding;
   margin: .3rem;
   color: #fff;
+  text-align: center;
   max-width: $global-width;
+
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  
+      .flex-item{
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+      }
+  }
+
 }
 
 // Herbs

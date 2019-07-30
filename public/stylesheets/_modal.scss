@@ -1,3 +1,4 @@
+$green: #73AC6B;
 #app-modal{
   animation: fadeinOut 8s;
 }
@@ -12,11 +13,14 @@
 }
 
 .modal-content {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: $green;
+  font-weight: bold;
+  font-size: 1.2rem;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   padding: .5rem;
-  text-emphasis: center;
+  text-align: center;
 }
 
 .close {
