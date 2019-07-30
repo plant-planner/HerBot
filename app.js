@@ -63,6 +63,7 @@ app.locals.title = 'herbot';
 // Adding Routes
 app.use('/', require('./routes/index'));
 app.use('/member', require('./routes/member'));
+app.use('/search', require('./routes/search'));
 
 app.use(function(req,res, next){
   res.send("There was an error")
