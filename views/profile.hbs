@@ -1,15 +1,14 @@
-<h1>Welcome {{username}}</h1>
+<h1>Welcome {{user.username}}</h1>
+<p>With {{title}} you can find, create and store your favorite herbs.
+  Our aim is to create the best database for herbs, bigly! So, buckle up and 
+  drive trough the world of herbs.  
+</p>
+
+<a href="/member/create"><h3>Submit a herb</h3></a>
+<a href="/member/favorites"><h3>See your favorites</h3></a>
+<a href="/"><h3>Browse herbs</h3></a>
 
 <script>
 
-const getBreeds = () => {
-  try {
-    return axios.get('{{host}}:{{port}}/member/profile')
-  } catch (error) {
-    console.error(error)
-  }
-}
-
-getBreeds();
 
 </script>

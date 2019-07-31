@@ -3,7 +3,7 @@
 <form method="POST" >
   <div class="flex-item">
   <label action="/login">Email:</label>
-  <input type="email" placeholder="Your email" name="username"></input>
+  <input type="email" placeholder="Your email" name="username" id="username"></input>
 
   <label>Password:</label>
   <input type="password" placeholder="Your password" name="password"></input>
@@ -15,3 +15,9 @@
 </form>
 
 <h3>   Dont`t have an account yet?  <a href="/member/signup">Sign up</a></h3>
+
+<script>
+  document.getElementById("username").addEventListener("blur", function(event) {
+
+  }) 
+</script>

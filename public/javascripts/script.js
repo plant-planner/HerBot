@@ -1,11 +1,10 @@
 // Burger
 function toggleBurger() {
+    var hamburger = document.getElementById("hamburger-box");
 
-    var x = document.getElementById("hamburger-box");
-
-    if (x.style.display === "flex") {
-      x.style.display = "none";
+    if (hamburger.style.display === "flex") {
+      hamburger.style.display = "none";
     } else {
-      x.style.display = "flex";
+      hamburger.style.display = "flex";
     }
   }
