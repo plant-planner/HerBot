@@ -18,6 +18,8 @@ router.get('/signup', (req, res, next) => {
   })
 });
 
+
+//Creating a route to check if username exist
 router.post('/signup/username', (req,res)=> {
 
   User.findOne({username: req.body.username})
@@ -58,14 +60,7 @@ router.post('/signup', (req, res, next) => {
 
 // Login for users
 router.get('/login', (req, res, next) => {
-    User.find({})
-    .then(()=> {
       res.render('login');
-    })
-    
-    .catch((error)=> {
-      next();
-    })
 });
 
 // POSTING user data when logging in
