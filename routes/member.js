@@ -1,6 +1,8 @@
 const express = require('express');
 const router  = express.Router();
 const User    = require('../models/User');
+const Herb    = require ('../models/Herb');
+const mongoose     = require('mongoose');
 var bcrypt    = require('bcrypt');
 
 
@@ -114,6 +116,71 @@ router.get("/profile", (req,res)=> {
     res.redirect("login");
   }
 })
+
+router.get("/create", (req,res)=> {
+  if(req.session.user) {
+    res.render("create-herb");
+  } else {
+    res.redirect("login");
+  }
+})
+
+router.post('/create', (req, res, next) => {
+  if(req.session.user) {
+    let newHerb = new Herb ({
+      commonName: req.body.commonName,
+      latinName: req.body.latinName,
+      image: req.body.imageUrl,
+      description: req.body.description,
+      waterNeed: req.body.waterNeed,
+      lightNeed: req.body.lightNeed,
+      temperature: {
+        min: req.body.temperatureMin,
+        max: req.body.temperatureMax,
+        optimal: req.body.temperatureOptimal
+      },
+      season: {
+        start: req.body.seasonStart,
+        end: req.body.seasonEnd,
+      },
+      inside: req.body.inside === "on",
+      creator: mongoose.Types.ObjectId(req.session.user._id)
+      // created: {
+      //   type: Date,
+      //   default: Date.now
+      // }
+    })
+    newHerb.save()
+    .then((newherb) => {
+      debugger
+      res.redirect("/");
+    })
+    .catch((err) => {
+      debugger
+      res.send("ERROOOROROROR" + err)
+    })
+  } else {
+    res.redirect("login");
+  }
+  
+  
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Logging out
 router.get('/logout', (req, res, next) => {
