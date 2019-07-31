@@ -151,12 +151,10 @@ router.post('/create', (req, res, next) => {
       // }
     })
     newHerb.save()
-    .then((newherb) => {
-      debugger
+    .then(() => {
       res.redirect("/");
     })
     .catch((err) => {
-      debugger
       res.send("ERROOOROROROR" + err)
     })
   } else {
