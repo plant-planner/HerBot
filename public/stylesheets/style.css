@@ -22,10 +22,8 @@ header {
     transition: all 0.2s ease;
     text-decoration: none;
     color: #2d2d2d;
-    font-weight: normal;
-    font-family: 'georgia', sans-serif;
-    font-weight: 400;
-    font-style: italic; }
+    font-weight: bold;
+    font-family: 'georgia', sans-serif; }
     header a:hover {
       color: olive; }
   header ul {
@@ -37,7 +35,7 @@ header {
     padding: 0;
     justify-content: flex-end; }
     header ul li {
-      margin: 0rem 1.3rem 0rem 1.3rem;
+      margin: 0rem 1.3rem 0rem 0rem;
       font-size: 1rem; }
   header #hamburger-box {
     position: fixed;
@@ -191,11 +189,22 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center; }
+    align-items: center; }
     .wrapper form .flex-item {
       display: flex;
       flex-direction: column;
-      margin: 1rem; }
+      max-width: 500px;
+      margin: 1rem;
+      width: 100%; }
+      .wrapper form .flex-item label {
+        align-self: flex-start;
+        color: lightgray; }
+    .wrapper form input {
+      background: white;
+      border: 1px solid #f4f4f4;
+      border-radius: 3px;
+      padding: .5rem .8rem;
+      margin: .6rem 0rem; }
 
 .herb-container {
   display: flex;

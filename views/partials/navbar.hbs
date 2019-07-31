@@ -5,14 +5,16 @@
   </div>
 
   <ul>
-    <li><a href="/member/signup">Sign up</a></li>
-    <li><a href="/member/login">Login</a></li>
-    <li><a href="/member/favorites">Favorites</a></li>
-    <li>
-      <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleBurger()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </li>
+    {{#if user }}
+        <li><a href="/member/profile">{{user.username}}</a></li>
+        <li>
+          <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleBurger()">
+          <i class="fa fa-bars"></i>
+          </a>
+        </li>
+    {{else}}
+        <li><a href="/member/login">Login</a></li>
+    {{/if}}
   </ul>
 
   <div id="hamburger-box">
@@ -22,4 +24,5 @@
   </div>
 
 </header>
+
 

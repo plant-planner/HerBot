@@ -78,7 +78,7 @@ router.post('/login', (req, res, next) => {
         if(match) {
           req.session.user = user;
           // Redirecting to profilepage
-          res.render('profile'), {user};
+          res.redirect('profile');
           // Changing the url to match the render
 
         } else {
@@ -99,15 +99,19 @@ router.post('/login', (req, res, next) => {
 
 // Listing userfavorites
 router.get('/favorites', (req, res, next) => {
-  res.render('favorites');
+  if(req.session.user) {
+    res.render("favorites");
+  } else {
+    res.redirect("login");
+  }
 });
 
 // Getting profile page
 router.get("/profile", (req,res)=> {
   if(req.session.user) {
-    res.send(`Welcome to your profile page ${req.session.user.username}`)
+    res.render("profile");
   } else {
-    res.render("profile")
+    res.redirect("login");
   }
 })
 
