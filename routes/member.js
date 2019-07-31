@@ -112,6 +112,7 @@ router.get("/profile", (req,res)=> {
   }
 })
 
+// create a herb redirecting
 router.get("/create", (req,res)=> {
   if(req.session.user) {
     res.render("create-herb");
@@ -120,6 +121,7 @@ router.get("/create", (req,res)=> {
   }
 })
 
+// save created herb in the database
 router.post('/create', (req, res, next) => {
   if(req.session.user) {
     let newHerb = new Herb ({
@@ -147,7 +149,7 @@ router.post('/create', (req, res, next) => {
     })
     newHerb.save()
     .then(() => {
-      res.redirect("/");
+      res.redirect("/myherbs");
     })
     .catch((err) => {
       res.send("ERROOOROROROR" + err)
@@ -159,21 +161,16 @@ router.post('/create', (req, res, next) => {
   
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// find all herbs the user created
+router.get('/myherbs', (req, res, next) => {
+  Herb.find({creator: mongoose.Types.ObjectId(req.session.user._id)})
+  .then((herbs) => {
+    res.render('my-herbs', {herbs});
+  })
+  .catch((err) => {
+    res.send("Error in myherbs route");
+  })
+});
 
 // Logging out
 router.get('/logout', (req, res, next) => {
