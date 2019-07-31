@@ -215,6 +215,10 @@ button {
   border-radius: 3px;
   color: #2d2d2d;
   text-align: center; }
+  .herb-container button {
+    width: 100%;
+    border-radius: 0;
+    background: #000; }
   .herb-container .herb-image {
     position: relative;
     display: flex;
@@ -249,7 +253,7 @@ button {
       bottom: 0;
       z-index: 2; }
   .herb-container .description {
-    padding: 1rem; }
+    padding: 1rem 2rem; }
 
 footer {
   position: fixed;
