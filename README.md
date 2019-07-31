@@ -14,14 +14,13 @@ Discover new herbs
 * connect them
 
 ## User
-* Creating Sessions
-* Enrypt password
-* Using handlebars to display and hide Nav-items like Login and Signup.
 * Creating success and error popups.
-* Check if username are available.
+* Connect database collections
+ 
 
 ## Nice to have
 * {Comments}
 * {REcipe API} Showing the 3 most popular drinks you can make with this herb.
+* Livesearch
 
 ## Issues
