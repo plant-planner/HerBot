@@ -60,7 +60,7 @@ router.post('/signup', (req, res, next) => {
 
 // Login for users
 router.get('/login', (req, res, next) => {
-      res.render('login');
+  res.render('login');
 });
 
 // POSTING user data when logging in
@@ -152,13 +152,11 @@ router.post('/create', (req, res, next) => {
       res.redirect("/myherbs");
     })
     .catch((err) => {
-      res.send("ERROOOROROROR" + err)
+      res.send("ERROOOROROROR")
     })
   } else {
     res.redirect("login");
-  }
-  
-  
+  }  
 });
 
 // find all herbs the user created
@@ -169,6 +167,17 @@ router.get('/myherbs', (req, res, next) => {
   })
   .catch((err) => {
     res.send("Error in myherbs route");
+  })
+});
+
+// direct to single herb of myherbs (for editing and deleting)
+router.get('/myherbmod/:id', (req, res, next) => {
+  Herb.findById(req.params.id)
+  .then((herb) => {
+    res.render('my-herb-mod', {herb});
+  })
+  .catch((err) => {
+    res.send("Error in myherb-detail route")
   })
 });
 
