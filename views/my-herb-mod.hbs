@@ -1,0 +1,14 @@
+
+<div class="single-herb-container">
+  <div class="single-herb-title" style="background-image: url('{{herb.image}}')">
+    <h2>{{ herb.commonName}}</h2>
+    <h3>{{ herb.latinName}}</h3>
+  </div>
+  <div class="single-herb-info">
+    <p>{{herb.description}}</p>
+    <h5>Minimal Temperature: {{herb.temperature.min}}</h5>
+    <h5>Maximal Temperature: {{herb.temperature.max}}</h5>
+    <h5>Optimal Temperature: {{herb.temperature.optimal}}</h5>
+  </div>
+  {{> edit}}
+</div>

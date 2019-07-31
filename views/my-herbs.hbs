@@ -1,4 +1,25 @@
 <h3 class="center">Checkout all the Herbs you created</h3>
 <div class="herbs-wrapper">
-  {{> herbs}}
+  {{#each herbs}}
+    <div class="herb-container">
+        <a href="/member/myherbmod/{{this._id}}">
+        <div class="herb-image" href="/member/myherbmod/{{this._id}}" style="background-image: url('{{this.image}}')">
+            <h2>{{this.commonName}}</h2>
+            <h4 class="sub-title">{{this.latinName}}</h4>
+        </div>
+        </a>
+
+        <div class="description">
+            {{this.description}}
+        </div>
+
+        <a href="/member/myherbmod/{{this._id}}">
+            <button>Read more</button>
+        </a>
+
+        <a href="/member/favorites/{{this._id}}">
+            <buttton>Favorite</buttton>
+        </a>                    
+    </div>
+  {{/each}}
 </div>
