@@ -19,11 +19,11 @@ const herbSchema = new Schema({
         type: String,
     },
     waterNeed: {
-        type: String,
+        type: Number,
         require: [true, "Add the amount of needed water"]
     },
     lightNeed: {
-        type: String,
+        type: Number,
         require: [true, "Add the amount of needed light"]
     },
     temperature: {

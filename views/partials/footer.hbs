@@ -5,6 +5,13 @@
       <input type="search" placeholder="Search for herbs" name="search">
       <button type="submit">Search</button>
     </form>
+    <form method="POST" action="/search/sliders">
+      <label for="water">Water <span id="water_val">0</span></label>
+      <input type="range" min="0" max="10" value="0" class="slider" id="water" name="water">
+      <label for="light">Light <span id="light_val">0</span></label>
+      <input type="range" min="0" max="10" value="0" class="slider" id="light" name="light">
+      <button type="submit">Search</button>
+    </form>
   </ul>
 </div>
 
