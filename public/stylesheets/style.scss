@@ -243,14 +243,14 @@ footer{
     padding: 0;
     z-index: 10;
   }
-  #slider-box {
+  #query-box {
     position: fixed;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     bottom: 0;
-    height: 50%;
+    height: 49%;
     width: 100%;
     background-color: #fff;
     z-index: 9;
@@ -263,7 +263,7 @@ footer{
       align-items: center;
     }
   }
-  .slider-icon {
+  .query-icon {
     z-index: 15;
     i {
     display: block;

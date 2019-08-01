@@ -10,13 +10,12 @@ function toggleBurger() {
   }
 
 // toggle slider
-function toggleSlider() {
-  var slider = document.getElementById("slider-box");
-
-  if (slider.style.display === "flex") {
-    slider.style.display = "none";
+function toggleQuery() {
+  var query = document.getElementById("query-box");
+  if (query.style.display === "flex") {
+    query.style.display = "none";
   } else {
-    slider.style.display = "flex";
+    query.style.display = "flex";
   }
 }
 
@@ -41,3 +40,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
   })
 
 });
+
+

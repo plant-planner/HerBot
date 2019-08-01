@@ -140,7 +140,6 @@ router.post('/myherbs/create', (req, res, next) => {
         start: req.body.seasonStart,
         end: req.body.seasonEnd,
       },
-      inside: req.body.inside === "on",
       creator: mongoose.Types.ObjectId(req.session.user._id)
     })
 
@@ -229,7 +228,6 @@ router.post('/myherbs/edit/:id', (req, res) =>{
           start: req.body.seasonStart,
           end: req.body.seasonEnd,
         },
-        inside: req.body.inside === "on",
         creator: mongoose.Types.ObjectId(req.session.user._id)
     };
 

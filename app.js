@@ -22,6 +22,14 @@ app.use(session({
 // Register Partials Folder
 hbs.registerPartials(__dirname + '/views/partials');
 
+// used to set html-select elements according to a database value
+hbs.registerHelper('ifvalue', function (conditional, options) {
+  if (options.hash.value && conditional && options.hash.value.toString() === conditional.toString()) {
+    return options.fn(this)
+  } else {
+    return options.inverse(this);
+  }
+});
 
 // Connecting to database
 mongoose.connect(process.env.MONGO_PASS, {useNewUrlParser: true})

@@ -19,11 +19,13 @@ const herbSchema = new Schema({
         type: String,
     },
     waterNeed: {
-        type: Number,
+        type: String,
+        enum: ["low", "medium", "high", "very high"]
         
     },
     lightNeed: {
-        type: Number,
+        type: String,
+        enum: ["low", "medium", "high", "very high"]
 
     },
     temperature: {
@@ -45,17 +47,10 @@ const herbSchema = new Schema({
             type: Number,
         }
     },
-    inside: {
-        type: Boolean,
-    },
     creator: {
         type: Schema.Types.ObjectId,
         ref: "User"
     }
-    // created: {
-    //     type: Date,
-    //     default: Date.now
-    // }
 });
 
 const Herb = mongoose.model("Herb", herbSchema);
