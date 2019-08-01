@@ -1,5 +1,8 @@
-<h1>Login</h1>
-<p>With {{title}} you get the best herbs. Phasellus eu mauris convallis lorem cursus maximus. Curabitur porta justo eu dui maximus, quis porta purus accumsan. Suspendisse bibendum enim at varius tristique. Vestibulum ut tristique nisl. Suspendisse non sagittis nisi. Proin nulla ipsum, volutpat quis dolor et, consequat iaculis mi.</p>
+{{> headerImg headline="Login" img="../images/back3.jpg"}}
+
+<div class="wrapper">
+<strong>With {{title}} you get the best herbs.</strong>
+<p>Phasellus eu mauris convallis lorem cursus maximus. Curabitur porta justo eu dui maximus, quis porta purus accumsan. Suspendisse bibendum enim at varius tristique. Vestibulum ut tristique nisl. Suspendisse non sagittis nisi. Proin nulla ipsum, volutpat quis dolor et, consequat iaculis mi.</p>
 <form method="POST">
   <div class="flex-item">
     <label action="/login">Email:</label>
@@ -14,8 +17,8 @@
   </div>
 </form>
 
-<h3>   Dont`t have an account yet?  <a href="/member/signup">Sign up</a></h3>
-
+<h3>Dont`t have an account yet?  <a href="/member/signup">Sign up</a></h3>
+</div>
 <script>
   document.getElementById("username").addEventListener("blur", function(event) {
   }) 

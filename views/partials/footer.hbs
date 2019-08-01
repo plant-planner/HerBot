@@ -1,6 +1,5 @@
 <footer class="footer">
   <ul>
-    {{!-- <li><a href="/member/favorites">Favorites</a></li> --}}
     <li>
       <form method="POST" action="/search" id="search-bar">
         <input type="search" placeholder="Search for herbs" name="search">
@@ -8,9 +7,9 @@
       </form>
     </li>
 
-    <li>
+    <li class="advanced">
       <a href="javascript:void(0);" class="query-icon" onclick="toggleQuery()">
-        <i class="fa fa-chevron-up"></i>
+        <span>Advanced search</span><i class="fa fa-chevron-up"></i>
       </a>
     </li>
   </ul>

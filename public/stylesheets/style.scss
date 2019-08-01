@@ -9,9 +9,10 @@ $global-padding: .5rem 1.5rem;
 $global-margin: 1.5rem 1.5rem;
 $global-width: 960px;
 // Colors
-$green: #73AC6B;
+$green: #54AF02;
 $herbot-white: #f5f5f5;
 $dark-gray: #2d2d2d;
+$ligt-gray: #f7f7f7;
 
 @mixin for-tablet-up {
   @media (min-width: 700px) { @content; }
@@ -28,12 +29,11 @@ body {
   font-size: 16px;
   line-height: 16px;
   font-family: "barlow", Helvetica, Arial, sans-serif;
-  background: $dark-gray;
+  background: $ligt-gray;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  padding-bottom: 5rem;
 }
 
 p{
@@ -75,7 +75,7 @@ input{
 
 
 button{
-  background: #73AC6B;
+  background: $green;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
@@ -96,11 +96,10 @@ button{
 .wrapper{
   display: flex;
   flex-direction: column;
-  background: #2d2d2d;
-  min-height: 100vh;
-  padding: $global-padding;
+  background: $ligt-gray;
+  padding: 1rem 1rem 5rem 1rem;
   margin: .3rem;
-  color: #fff;
+  color: #464646;
   text-align: center;
   max-width: $global-width;
 
@@ -119,7 +118,7 @@ button{
 
         label{
           align-self: flex-start;
-          color: lightgray;
+          color: #2d2d2d;
         }
       }
 
@@ -135,9 +134,28 @@ button{
 
 }
 
+.hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 25vh;
+  background-size: cover;
+  width: 100%;
+  top: 0;
+  margin-bottom: 1rem;
+
+  &.fullscreen{
+    height: 85vh;
+  }
+
+  .hero-text{
+    line-height: 2.3rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 0px 6px rgba(45, 45, 45, 1);
+  }
+}
 // Herbs
-
-
 .herbs-wrapper{
   display: flex;
   flex-direction: column;
@@ -145,10 +163,14 @@ button{
   @include for-tablet-up{    
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+    max-width: $global-width;
+    align-items: flex-start;
  }
 
+
 }
+
+// Container with links
 .herb-container{
   display: flex;
   flex-direction: column;
@@ -165,11 +187,25 @@ button{
     margin: 1%;
  }
 
+  
+  // Styling single herb container
+    &.single{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .herb-image{
+        height: 35vh;
+      }
+}
+
+
+
   .description{
     padding: 1rem 2rem;
-
-
+    line-height: 1.3rem;
   }
+
 
 
   .container-bottom{
@@ -206,14 +242,12 @@ button{
     }
   }
 
-
-
   .herb-image {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 20vh;
+    height: 25vh;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -240,7 +274,6 @@ button{
     // text-shadow: 0px 0px 2px rgba(45, 45, 45, 0.25);
     font-size: 3rem;
     color: #fff;
-    line-height: 1rem;
     z-index: 2;
     }
 
@@ -269,13 +302,13 @@ footer{
   height: 60px;
   width: 100%;
   box-sizing: border-box;
-  background: white;
+  background: rgba($color: #fff, $alpha: 1);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
 
   ul{
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -290,7 +323,8 @@ footer{
     bottom: 0;
     height: 49%;
     width: 100%;
-    background-color: #fff;
+    background: rgba($color: #fff, $alpha: 1);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
     z-index: 9;
     border-radius: 1px;
     
@@ -301,11 +335,20 @@ footer{
       align-items: center;
     }
   }
+
+  .advanced{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    span{
+      margin-right: .5rem;
+    }
+  }
   .query-icon {
     z-index: 15;
     i {
-    display: block;
-    font-size: 1.9rem;  
+    display: inline;
+    margin-top: 1rem;
+    font-size: 1.4rem;  
     line-height: 1rem;
   } 
 
