@@ -10,13 +10,15 @@
         <div class="description">
             {{this.description}}
         </div>
-
-        <a href="/herb/{{this._id}}">
-            <button>Read more</button>
-        </a>
-
-        <a href="/herb/favorites/{{this._id}}">
-            <buttton>Favorite</buttton>
-        </a>                    
+        
+        <div class="container-bottom">
+            <div class="flex-item">
+                <a href="/herb/favorites/{{this._id}}" class="favorites">Favorite</a>     
+            </div> 
+            
+            <div class="flex-item">
+                <a href="/herb/{{this._id}}">Read more</a>
+            </div>  
+        </div>             
     </div>
 {{/each}}
