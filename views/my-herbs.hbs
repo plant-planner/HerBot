@@ -2,8 +2,8 @@
 <div class="herbs-wrapper">
   {{#each herbs}}
     <div class="herb-container">
-        <a href="/member/myherbmod/{{this._id}}">
-        <div class="herb-image" href="/member/myherbmod/{{this._id}}" style="background-image: url('{{this.image}}')">
+        <a href="/member/myherbs/{{this._id}}">
+        <div class="herb-image" href="/member/myherbs/{{this._id}}" style="background-image: url('{{this.image}}')">
             <h2>{{this.commonName}}</h2>
             <h4 class="sub-title">{{this.latinName}}</h4>
         </div>
@@ -13,7 +13,7 @@
             {{this.description}}
         </div>
 
-        <a href="/member/myherbmod/{{this._id}}">
+        <a href="/member/myherbs/{{this._id}}">
             <button>Read more</button>
         </a>
 
