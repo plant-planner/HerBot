@@ -149,7 +149,7 @@ router.post('/create', (req, res, next) => {
     })
     newHerb.save()
     .then(() => {
-      res.redirect("/myherbs");
+      res.redirect("/member/myherbs");
     })
     .catch((err) => {
       res.send("ERROOOROROROR")
@@ -171,10 +171,10 @@ router.get('/myherbs', (req, res, next) => {
 });
 
 // direct to single herb of myherbs (for editing and deleting)
-router.get('/myherbmod/:id', (req, res, next) => {
+router.get('/myherbs/:id', (req, res, next) => {
   Herb.findById(req.params.id)
   .then((herb) => {
-    res.render('my-herb-mod', {herb});
+    res.render('my-herbs-single', {herb});
   })
   .catch((err) => {
     res.send("Error in myherb-detail route")
