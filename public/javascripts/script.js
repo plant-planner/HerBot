@@ -9,7 +9,6 @@ function toggleBurger() {
     }
   }
 
-
 window.addEventListener('DOMContentLoaded', (event) => {
 
   var water = document.getElementById("water");
