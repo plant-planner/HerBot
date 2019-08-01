@@ -51,13 +51,16 @@ header {
     border-radius: 1px; }
     header #hamburger-box a {
       padding: 20px 16px;
-      width: 10%;
+      width: 30%;
       text-align: center;
       text-decoration: none;
       display: block;
       color: #2d2d2d;
       font-size: 1.2rem;
       border-bottom: 1px solid #2d2d2d; }
+      @media (min-width: 700px) {
+        header #hamburger-box a {
+          width: 20%; } }
       header #hamburger-box a:hover {
         color: olive; }
       header #hamburger-box a:last-of-type {

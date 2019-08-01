@@ -3,6 +3,10 @@ $green: #73AC6B;
 $herbot-white: #f5f5f5;
 $dark-gray: #2d2d2d;
 
+@mixin for-tablet-up {
+  @media (min-width: 700px) { @content; }
+}
+
 // Header Styling
 header{
   position: relative;
@@ -73,13 +77,18 @@ header{
 
   a {
     padding: 20px 16px;
-    width: 10%;
+    width: 30%;
     text-align: center;
     text-decoration: none;
     display: block;
     color: $dark-gray;
     font-size: 1.2rem;
     border-bottom: 1px solid $dark-gray;
+
+    @include for-tablet-up{    
+      width: 20%;
+   }
+
       &:hover {
         color: olive;
       }
