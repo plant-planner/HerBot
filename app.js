@@ -82,7 +82,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 // default value for title local
-app.locals.title = 'herbot';
+app.locals.title = 'HerbDB';
 app.locals.host = process.env.HOST;
 app.locals.port = process.env.PORT;
 // Adding Routes
