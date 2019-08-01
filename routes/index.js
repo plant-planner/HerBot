@@ -29,12 +29,16 @@ router.get('/herb/:id', (req, res, next) => {
 
 // A route for storing favorites
 router.post('/herb/favorites/:id', (req,res, next)=> {
-  User.findByIdAndUpdate(req.session.user._id, {$push: {favorites: mongoose.Types.ObjectId(req.params.id)}})
+  console.log(req.session.user)
+  User.findByIdAndUpdate(req.session.user._id, {$addToSet: {favorites: mongoose.Types.ObjectId(req.params.id)}}, {new: true})
       .then((user)=> {
-          res.redirect(`/`)
+          console.log(user)
+          res.status(200).send({favorite: (user.favorites.indexOf(req.params.id) > -1)})
+
       })
       .catch((error)=> {
-          next()
+          console.error(error)
+          next(error)
       })
 
 })

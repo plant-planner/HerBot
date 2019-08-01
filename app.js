@@ -15,8 +15,12 @@ const session = require('express-session')
 
 app.use(session({
   secret: 'was geht',
-  resave: false,
+  resave: true,
   saveUninitialized: true,
+  cookie: {
+    path    : '/',
+    httpOnly: false,
+  }
 }))
 
 // Register Partials Folder
@@ -32,7 +36,7 @@ hbs.registerHelper('ifvalue', function (conditional, options) {
 });
 
 // Connecting to database
-mongoose.connect(process.env.MONGO_PASS, {useNewUrlParser: true})
+mongoose.connect(process.env.MONGO_PASS, {useNewUrlParser: true, useFindAndModify: false})
   .then(x => {
     console.log(`Connected to Mongo Database`)
   })

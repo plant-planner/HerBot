@@ -12,13 +12,40 @@
         </div>
         
         <div class="container-bottom">
+
             <div class="flex-item">
-                <a href="/herb/favorites/{{this._id}}" class="favorites">Favorite</a>     
+            <button onclick="favorites('{{this._id}}')" class="favorites {{this._id}}" id="favorite"><i class="fa fa-heart"></i>Favorite</button>
+
             </div> 
-            
-            <div class="flex-item">
+             <div class="flex-item">
                 <a href="/herb/{{this._id}}">Read more</a>
-            </div>  
+            </div>         
+
         </div>             
     </div>
 {{/each}}
+
+<script>
+    function favorites (id) {
+        let button = document.getElementById("favorite");
+        button.addEventListener("click", function(event){
+        axios.post('{{host}}:{{port}}/herb/favorites/' + id)
+        .then(function (response) {
+            if (response){
+                button.style.color = "yellow";
+            } else {
+                console.log(response);
+            }
+            
+      
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    });
+    }
+
+</script>
+
+
+

@@ -128,7 +128,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  padding-bottom: 5rem; }
 
 p {
   line-height: 1.5rem; }
@@ -206,15 +207,29 @@ button {
       padding: .5rem .8rem;
       margin: .6rem 0rem; }
 
+.herbs-wrapper {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 700px) {
+    .herbs-wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%; } }
+
 .herb-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   margin: 0 0 1.5rem 0;
   background: white;
   border-radius: 3px;
   color: #2d2d2d;
   text-align: center; }
+  @media (min-width: 700px) {
+    .herb-container {
+      width: 45%;
+      margin: 1%; } }
   .herb-container .description {
     padding: 1rem 2rem; }
   .herb-container .container-bottom {
@@ -223,12 +238,20 @@ button {
     align-items: center;
     justify-content: space-around;
     padding: 1rem 2rem; }
+    .herb-container .container-bottom .fa-heart {
+      margin-right: 5px; }
     .herb-container .container-bottom a {
       font-weight: bold; }
     .herb-container .container-bottom .favorites {
       color: darkred; }
     .herb-container .container-bottom button {
-      background: green; }
+      background: none;
+      color: darkred;
+      border: none;
+      text-transform: none;
+      font-size: 1rem; }
+      .herb-container .container-bottom button:focus {
+        outline: none; }
   .herb-container .herb-image {
     position: relative;
     display: flex;

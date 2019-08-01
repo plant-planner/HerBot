@@ -1,6 +1,6 @@
 <h3>Add a herb to our collection</h3>
-<form action="/member/myherbs/create" method="POST">
 
+<form action="/member/myherbs/create" method="POST">
   <div class="flex-item">
     <input type="text" placeholder="Common Name" name="commonName" id="commonName"></input>
     <input type="text" placeholder="Latin Name" name="latinName" id="latinName"></input>
@@ -14,6 +14,7 @@
   <div class="flex-item">
     <p>Requirements</p>
     <label for="waterNeed">Water</label>
+
     <select name="waterNeed" id="waterNeed">
       <option value="-"></option>
       <option value="very low">low</option>
@@ -45,6 +46,7 @@
     <input type="number" name="seasonStart" id="seasonStart"></input>
     <label for="seasonEnd">To:</label>
     <input type="number" name="seasonEnd" id="seasonEnd"></input>
+
     <button>Submit</button>
   </div>
 
