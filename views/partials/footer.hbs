@@ -9,18 +9,32 @@
     </li>
 
     <li>
-      <a href="javascript:void(0);" class="slider-icon" onclick="toggleSlider()">
+      <a href="javascript:void(0);" class="query-icon" onclick="toggleQuery()">
         <i class="fa fa-chevron-up"></i>
       </a>
     </li>
   </ul>
 
-  <div id="slider-box">
-    <form method="POST" action="/search/sliders" id="slider-form">
+  <div id="query-box">
+    <form method="POST" action="/search/query" id="query-form">
       <label for="water">Water <span id="water_val">0</span></label>
-      <input type="range" min="0" max="10" value="0" class="slider" id="water" name="water">
+      <select class="query" id="water" name="water">
+        <option value=""></option>
+        <option value="low">low</option>
+        <option value="medium">medium</option>
+        <option value="high">high</option>
+        <option value="very high">very high</option>
+      </select>
+
       <label for="light">Light <span id="light_val">0</span></label>
-      <input type="range" min="0" max="10" value="0" class="slider" id="light" name="light">
+      <select class="query" id="light" name="light">
+        <option value=""></option>
+        <option value="low">low</option>
+        <option value="medium">medium</option>
+        <option value="high">high</option>
+        <option value="very high">very high</option>
+      </select>
+      
       <button type="submit">Search</button>
     </form>
   </div>

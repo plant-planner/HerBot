@@ -14,9 +14,24 @@
   <div class="flex-item">
     <p>Requirements</p>
     <label for="waterNeed">Water</label>
-    <input type="number" name="waterNeed" id="waterNeed" value="{{herb.waterNeed}}"></input>
+    <select name="waterNeed" id="waterNeed">
+      <option value="{{herb.waterNeed}}" selected></option>
+      <option value="low">low</option>
+      <option value="medium">medium</option>
+      <option value="high">high</option>
+      <option value="very high">very high</option>
+    </select>
+
     <label for="lightNeed">Light</label>
-    <input type="number" name="lightNeed" id="lightNeed" value="{{herb.lightNeed}}"></input>
+    <select name="lightNeed" id="lightNeed">
+      <option value="{{herb.lightNeed}}" selected></option>
+      <option value="low">low</option>
+      <option value="medium">medium</option>
+      <option value="high">high</option>
+      <option value="very high">very high</option>
+    </select>
+
+
     <label for="temperatureMin">Minimal Temperature</label>
     <input type="number" name="temperatureMin" id="temperatureMin" value="{{herb.temperature.min}}"></input>
     <label for="temperatureMax">Maximal Temperature</label>
@@ -31,8 +46,6 @@
     <input type="number" name="seasonStart" id="seasonStart" value="{{herb.season.start}}"></input>
     <label for="seasonEnd">To:</label>
     <input type="number" name="seasonEnd" id="seasonEnd" value="{{herb.season.end}}"></input>
-    <label for="inside">Can be grown inside</label>
-    <input type="checkbox" name="inside" id="inside"  value="{{herb.inside}}"></input>
     <button>Submit</button>
   </div>
 </form>

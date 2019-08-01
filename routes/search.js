@@ -21,11 +21,8 @@ router.post('/', (req, res, next) => {
   })
 })
 
-router.post('/sliders', (req, res, next) => {
-  var waterInt = parseInt(req.body.water);
-  var lightInt = parseInt(req.body.light)
-
-  Herb.find({ $and: [{waterNeed: {$gte: waterInt}}, {lightNeed: {$gte: lightInt}}] })
+router.post('/query', (req, res, next) => {
+  Herb.find({ $and: [{waterNeed: req.body.water}, {lightNeed: req.body.light}] })
   .then((herbs) => {
     console.log(herbs);
     if (herbs.length <= 0) { 
