@@ -241,6 +241,36 @@ footer{
     width: 100%;
     margin: 0;
     padding: 0;
+    z-index: 10;
+  }
+  #slider-box {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+    border-radius: 1px;
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .slider-icon {
+    z-index: 15;
+    i {
+    display: block;
+    font-size: 1.9rem;  
+    line-height: 1rem;
+  } 
+
   }
 }
 

@@ -1,18 +1,30 @@
 <footer class="footer">
   <ul>
     {{!-- <li><a href="/member/favorites">Favorites</a></li> --}}
-    <form method="POST" action="/search">
-      <input type="search" placeholder="Search for herbs" name="search">
-      <button type="submit">Search</button>
-    </form>
-    <form method="POST" action="/search/sliders">
+    <li>
+      <form method="POST" action="/search" id="search-bar">
+        <input type="search" placeholder="Search for herbs" name="search">
+        <button type="submit">Search</button>
+      </form>
+    </li>
+
+    <li>
+      <a href="javascript:void(0);" class="slider-icon" onclick="toggleSlider()">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </li>
+  </ul>
+
+  <div id="slider-box">
+    <form method="POST" action="/search/sliders" id="slider-form">
       <label for="water">Water <span id="water_val">0</span></label>
       <input type="range" min="0" max="10" value="0" class="slider" id="water" name="water">
       <label for="light">Light <span id="light_val">0</span></label>
       <input type="range" min="0" max="10" value="0" class="slider" id="light" name="light">
       <button type="submit">Search</button>
     </form>
-  </ul>
-</div>
+  </div>
+
+</footer>
 
 {{> modal}}

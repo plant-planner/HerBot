@@ -282,6 +282,30 @@ footer {
     justify-content: space-around;
     width: 100%;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    z-index: 10; }
+  footer #slider-box {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+    border-radius: 1px; }
+    footer #slider-box form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+  footer .slider-icon {
+    z-index: 15; }
+    footer .slider-icon i {
+      display: block;
+      font-size: 1.9rem;
+      line-height: 1rem; }
 
 /*# sourceMappingURL=style.css.map */

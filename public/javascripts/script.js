@@ -1,4 +1,4 @@
-// Burger
+// toggle Burger
 function toggleBurger() {
     var hamburger = document.getElementById("hamburger-box");
 
@@ -8,6 +8,17 @@ function toggleBurger() {
       hamburger.style.display = "flex";
     }
   }
+
+// toggle slider
+function toggleSlider() {
+  var slider = document.getElementById("slider-box");
+
+  if (slider.style.display === "flex") {
+    slider.style.display = "none";
+  } else {
+    slider.style.display = "flex";
+  }
+}
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
