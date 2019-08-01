@@ -22,7 +22,8 @@ header {
     transition: all 0.2s ease;
     text-decoration: none;
     color: #2d2d2d;
-    font-weight: bold;
+    font-weight: normal;
+    font-size: 1rem;
     font-family: 'georgia', sans-serif; }
     header a:hover {
       color: olive; }
@@ -86,7 +87,7 @@ header {
 
 .modal-content {
   background-color: rgba(255, 255, 255, 0.9);
-  color: #73AC6B;
+  color: #54AF02;
   font-weight: bold;
   font-size: 1.2rem;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
@@ -127,12 +128,11 @@ body {
   font-size: 16px;
   line-height: 16px;
   font-family: "barlow", Helvetica, Arial, sans-serif;
-  background: #2d2d2d;
+  background: #f7f7f7;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
-  padding-bottom: 5rem; }
+  overflow-x: hidden; }
 
 p {
   line-height: 1.5rem; }
@@ -142,12 +142,12 @@ p {
   color: olive; }
 
 a {
-  color: #73AC6B;
+  color: #54AF02;
   text-decoration: none;
   transition: all 0.5s ease; }
 
 a:hover {
-  color: #467140; }
+  color: #244a01; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'georgia', sans-serif;
@@ -165,7 +165,7 @@ input {
   margin: .6rem 0rem; }
 
 button {
-  background: #73AC6B;
+  background: #54AF02;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
@@ -182,11 +182,10 @@ button {
 .wrapper {
   display: flex;
   flex-direction: column;
-  background: #2d2d2d;
-  min-height: 100vh;
-  padding: 0.5rem 1.5rem;
+  background: #f7f7f7;
+  padding: 1rem 1rem 5rem 1rem;
   margin: .3rem;
-  color: #fff;
+  color: #464646;
   text-align: center;
   max-width: 960px; }
   .wrapper form {
@@ -202,13 +201,30 @@ button {
       width: 100%; }
       .wrapper form .flex-item label {
         align-self: flex-start;
-        color: lightgray; }
+        color: #2d2d2d; }
     .wrapper form input {
       background: white;
       border: 1px solid #f4f4f4;
       border-radius: 3px;
       padding: .5rem .8rem;
       margin: .6rem 0rem; }
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 25vh;
+  background-size: cover;
+  width: 100%;
+  top: 0;
+  margin-bottom: 1rem; }
+  .hero.fullscreen {
+    height: 85vh; }
+  .hero .hero-text {
+    line-height: 2.3rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 0px 6px #2d2d2d; }
 
 .herbs-wrapper {
   display: flex;
@@ -217,7 +233,8 @@ button {
     .herbs-wrapper {
       flex-direction: row;
       flex-wrap: wrap;
-      width: 100%; } }
+      max-width: 960px;
+      align-items: flex-start; } }
 
 .herb-container {
   display: flex;
@@ -233,8 +250,15 @@ button {
     .herb-container {
       width: 45%;
       margin: 1%; } }
+  .herb-container.single {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    .herb-container.single .herb-image {
+      height: 35vh; }
   .herb-container .description {
-    padding: 1rem 2rem; }
+    padding: 1rem 2rem;
+    line-height: 1.3rem; }
   .herb-container .container-bottom {
     display: flex;
     flex-direction: row;
@@ -260,7 +284,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 20vh;
+    height: 25vh;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat; }
@@ -279,7 +303,6 @@ button {
       top: 1rem;
       font-size: 3rem;
       color: #fff;
-      line-height: 1rem;
       z-index: 2; }
     .herb-container .herb-image .sub-title {
       position: absolute;
@@ -305,7 +328,7 @@ footer {
   footer ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -319,7 +342,8 @@ footer {
     bottom: 0;
     height: 49%;
     width: 100%;
-    background-color: #fff;
+    background: white;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
     z-index: 9;
     border-radius: 1px; }
     footer #query-box form {
@@ -327,11 +351,17 @@ footer {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
+  footer .advanced {
+    margin-top: 1rem;
+    margin-left: 1rem; }
+    footer .advanced span {
+      margin-right: .5rem; }
   footer .query-icon {
     z-index: 15; }
     footer .query-icon i {
-      display: block;
-      font-size: 1.9rem;
+      display: inline;
+      margin-top: 1rem;
+      font-size: 1.4rem;
       line-height: 1rem; }
 
 /*# sourceMappingURL=style.css.map */

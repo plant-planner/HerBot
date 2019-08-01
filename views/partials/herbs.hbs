@@ -1,3 +1,4 @@
+
 {{#each herbs}}
     <div class="herb-container">
         <a href="/herb/{{this._id}}">
@@ -8,7 +9,7 @@
         </a>
 
         <div class="description">
-            {{this.description}}
+            <p>{{this.description}}</p>
         </div>
         
         <div class="container-bottom">
@@ -24,6 +25,7 @@
         </div>             
     </div>
 {{/each}}
+
 
 <script>
     function favorites (id) {
