@@ -1,0 +1,51 @@
+<h3>Make changes to your herb</h3>
+<form action="/member/myherbs/edit/{{herb._id}}" method="POST">
+
+  <div class="flex-item">
+    <input type="text" placeholder="Common Name" name="commonName" id="commonName" value="{{herb.commonName}}"></input>
+    <input type="text" placeholder="Latin Name" name="latinName" id="latinName" value="{{herb.latinName}}"></input>
+    <input type="url" placeholder="Image-url" name="imageUrl" id="imageUrl" value="{{herb.image}}"></input>
+  </div>
+  
+  <div class="flex-item">
+    <textarea rows="6" cols="60" type="text" placeholder="Give a short description" name="description" id="description" value="{{herb.description}}"></textarea>
+  </div>
+
+  <div class="flex-item">
+    <p>Requirements</p>
+    <label for="waterNeed">Water</label>
+    <select name="waterNeed" id="waterNeed">
+      <option value="{{herb.waterNeed}}" selected></option>
+      <option value="low">low</option>
+      <option value="medium">medium</option>
+      <option value="high">high</option>
+      <option value="very high">very high</option>
+    </select>
+
+    <label for="lightNeed">Light</label>
+    <select name="lightNeed" id="lightNeed">
+      <option value="{{herb.lightNeed}}" selected></option>
+      <option value="low">low</option>
+      <option value="medium">medium</option>
+      <option value="high">high</option>
+      <option value="very high">very high</option>
+    </select>
+
+
+    <label for="temperatureMin">Minimal Temperature</label>
+    <input type="number" name="temperatureMin" id="temperatureMin" value="{{herb.temperature.min}}"></input>
+    <label for="temperatureMax">Maximal Temperature</label>
+    <input type="number" name="temperatureMax" id="temperatureMax" value="{{herb.temperature.max}}"></input>
+    <label for="temperatureOptimal">Optimal Temperature</label>
+    <input type="number" name="temperatureOptimal" id="temperatureOptimal" value="{{herb.temperature.optimal}}"></input>
+  </div>
+
+  <div class="flex-item">
+    <p>Growing Season</p>
+    <label for="seasonStart">From:</label>
+    <input type="number" name="seasonStart" id="seasonStart" value="{{herb.season.start}}"></input>
+    <label for="seasonEnd">To:</label>
+    <input type="number" name="seasonEnd" id="seasonEnd" value="{{herb.season.end}}"></input>
+    <button>Submit</button>
+  </div>
+</form>

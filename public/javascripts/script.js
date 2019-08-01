@@ -1,4 +1,4 @@
-// Burger
+// toggle Burger
 function toggleBurger() {
     var hamburger = document.getElementById("hamburger-box");
 
@@ -9,6 +9,15 @@ function toggleBurger() {
     }
   }
 
+// toggle slider
+function toggleQuery() {
+  var query = document.getElementById("query-box");
+  if (query.style.display === "flex") {
+    query.style.display = "none";
+  } else {
+    query.style.display = "flex";
+  }
+}
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
@@ -31,3 +40,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
   })
 
 });
+
+
