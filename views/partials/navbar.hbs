@@ -6,10 +6,12 @@
 
   <ul>
     {{#if user }}
-        <li><a href="/member/profile">{{user.username}}</a></li>
+        <li>
+          <a href="/member/profile">{{user.username}}</a>
+        </li>
         <li>
           <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleBurger()">
-          <i class="fa fa-bars"></i>
+            <i class="fa fa-bars"></i>
           </a>
         </li>
     {{else}}
