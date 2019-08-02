@@ -228,17 +228,31 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 35vh;
+  height: 25vh;
   background-size: cover;
   width: 100vw;
   top: 0;
   margin-bottom: 1rem; }
+  .hero.frontpage {
+    width: 100vw;
+    height: 50vh; }
+    .hero.frontpage .hero-text {
+      font-size: 3rem;
+      line-height: 3.5rem; }
   .hero.fullscreen {
     width: 100vw;
     height: 88vh; }
   .hero .hero-text {
     align-self: center;
     line-height: 2.3rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 0px 10px #2d2d2d;
+    margin: 0; }
+  .hero p {
+    align-self: center;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
     text-align: center;
     color: #fff;
     text-shadow: 0px 0px 6px #2d2d2d; }
@@ -340,7 +354,7 @@ footer {
   height: 60px;
   width: 100%;
   box-sizing: border-box;
-  background: white;
+  background: #f0f0f0;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15); }
   footer ul {
     list-style: none;
