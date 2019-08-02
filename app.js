@@ -27,13 +27,13 @@ app.use(session({
 hbs.registerPartials(__dirname + '/views/partials');
 
 // used to set html-select elements according to a database value
-hbs.registerHelper('ifvalue', function (conditional, options) {
-  if (options.hash.value && conditional && options.hash.value.toString() === conditional.toString()) {
-    return options.fn(this)
-  } else {
-    return options.inverse(this);
-  }
-});
+// hbs.registerHelper('ifvalue', function (conditional, options) {
+//   if (options.hash.value && conditional && options.hash.value.toString() === conditional.toString()) {
+//     return options.fn(this)
+//   } else {
+//     return options.inverse(this);
+//   }
+// });
 
 // Connecting to database
 mongoose.connect(process.env.MONGO_PASS, {useNewUrlParser: true, useFindAndModify: false})
@@ -46,8 +46,6 @@ mongoose.connect(process.env.MONGO_PASS, {useNewUrlParser: true, useFindAndModif
 
 const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
-
-
 
 // Middleware Setup
 app.use(logger('dev'));
@@ -85,6 +83,7 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.locals.title = 'HerbDB';
 app.locals.host = process.env.HOST;
 app.locals.port = process.env.PORT;
+
 // Adding Routes
 app.use('/', require('./routes/index'));
 app.use('/member', require('./routes/member'));
