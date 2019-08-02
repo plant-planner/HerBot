@@ -362,11 +362,14 @@ footer {
       border: 1px solid #54AF02;
       border-radius: 3px;
       background-color: #fff; }
+    footer #query-box option {
+      text-align: center; }
     footer #query-box form {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      width: 30%; }
   footer .advanced {
     margin-top: 1rem;
     margin-left: 1rem; }
