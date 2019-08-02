@@ -225,8 +225,6 @@ button{
     justify-content: space-around;
     padding: 1rem 2rem;
 
-
-
     .flex-item{
     }
     .fa-heart{
@@ -350,16 +348,18 @@ footer{
       border: 1px solid $green;
       border-radius: 3px;
       background-color: #fff;
-  }
+    }
 
+    option {
+      text-align: center;
+    }
 
-  
-    
     form {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 30%;
     }
   }
 

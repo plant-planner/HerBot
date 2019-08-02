@@ -1,10 +1,11 @@
 <div class="wrapper">
 <h3 class="center">Checkout all the Herbs you created</h3>
+
 <div class="herbs-wrapper">
   {{#each herbs}}
     <div class="herb-container">
         <a href="/member/myherbs/{{this._id}}">
-        <div class="herb-image" href="/member/myherbs/{{this._id}}" style="background-image: url('{{this.image}}')">
+        <div class="herb-image" href="/member/{{this._id}}" style="background-image: url('{{this.image}}')">
             <h2>{{this.commonName}}</h2>
             <h4 class="sub-title">{{this.latinName}}</h4>
         </div>
@@ -24,6 +25,8 @@
     </div>
     
   {{/each}}
-  <a href="/member/myherbs/create"><h3>Submit a herb</h3></a>
+  <div class="submit-herb">
+   <a href="/member/myherbs/create"><button>Submit a herb</button></a>   
+  </div>
 </div>
 </div>
