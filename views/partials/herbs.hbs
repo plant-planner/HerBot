@@ -15,7 +15,7 @@
         <div class="container-bottom">
 
             <div class="flex-item">
-            <button onclick="favorites('{{this._id}}')" class="favorites {{this._id}}" id="favorite"><i class="fa fa-heart"></i>Favorite</button>
+            <button onclick="favorites('{{this._id}}')" class="favorites" id="favorite"><i class="fa fa-heart"></i>Favorite</button>
 
             </div> 
              <div class="flex-item">
@@ -29,22 +29,26 @@
 
 <script>
     function favorites (id) {
-        let button = document.getElementById("favorite");
-        button.addEventListener("click", function(event){
-        axios.post('{{host}}:{{port}}/herb/favorites/' + id)
-        .then(function (response) {
-            if (response){
-                button.style.color = "yellow";
-            } else {
-                console.log(response);
-            }
-            
-      
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-    });
+        let button = document.getElementsByClassName("favorites");
+        for (var i = 0; i < button.length; i++) {
+            button[i].addEventListener('click', function(){
+
+            axios.post('{{host}}:{{port}}/herb/favorites/' + id)
+                .then(function (response) {
+                    if (response){
+                        button[i].style.color = "yellow";
+                    } else {
+                        console.log(response);
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            });
+        }
+        
+
+        
     }
 
 </script>

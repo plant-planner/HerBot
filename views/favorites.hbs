@@ -1,5 +1,7 @@
 {{> headerImg headline="Favorite herbs" img="../images/back2.jpg"}}
 
-{{!-- <div class="wrapper">
-
-</div> --}}
+<div class="wrapper">
+ {{#each user}}
+    <h2>{{herb.commonName}}</h2>
+  {{/each}}
+</div> 

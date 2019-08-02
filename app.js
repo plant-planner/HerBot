@@ -10,17 +10,24 @@ const logger       = require('morgan');
 const path         = require('path');
 const app          = express();
 
+
 // Setting upp Sessions for user
 const session = require('express-session')
+const MongoStore = require('connect-mongo')(session);
+
+mongoose.Promise = global.Promise;
+const db = mongoose.connection
 
 app.use(session({
   secret: 'was geht',
-  resave: true,
+  resave: false,
   saveUninitialized: true,
   cookie: {
     path    : '/',
     httpOnly: false,
-  }
+    maxAge: 8*60*60*1000  
+  },
+  store: new MongoStore({ mongooseConnection: db })
 }))
 
 // Register Partials Folder
