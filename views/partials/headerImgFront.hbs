@@ -1,4 +1,14 @@
   <div class="hero frontpage" style="background: url({{img}}) no-repeat center center;">
     <h1 class="hero-text">{{headline}}</h1>
     <p>{{paragraph}}</p>
+    <div class="search">
+      <ul>
+        <li>
+          <form method="POST" action="/search" id="search-bar">
+            <input type="search" placeholder="Search for herbs" name="search">
+            <button type="submit">Search</button>
+          </form>
+        </li>
+    </ul>
+    </div>
   </div>
