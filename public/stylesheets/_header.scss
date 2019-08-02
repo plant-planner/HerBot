@@ -38,7 +38,10 @@ header{
     img{
       width: 100px;
     }
+    
   }
+
+
 
   a{
    
@@ -51,6 +54,7 @@ header{
       &:hover{
         color: olive;
       }
+     
   }
 
   ul{
@@ -106,6 +110,10 @@ header{
       &:last-of-type {
         border: none;
       }
+  }
+  
+  .green {
+    color: $green;
   }
 
 }

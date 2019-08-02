@@ -75,7 +75,7 @@ router.post('/login', (req, res, next) => {
         if(match) {
           req.session.user = user;
           // Redirecting to profilepage
-          res.redirect('profile');
+          res.redirect('/');
           // Changing the url to match the render
 
         } else {
