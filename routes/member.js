@@ -103,6 +103,23 @@ router.get('/favorites', (req, res, next) => {
   }
 });
 
+// router.get('/favorites', (req, res, next) => {
+//   if(req.session.user) { 
+//     User.find({_id: mongoose.Types.ObjectId(req.session.user._id)})
+//     .then((user) => {
+//       User.find({_id: favorites})
+//     })
+//     .then((herbs) => {
+//       es.render('favorites', {herbs});
+//     })
+//     .catch((err) => {
+//       res.send("Error in myherbs route");
+//     })
+//   } else {
+//     res.redirect('login');
+//   }
+// });
+
 // Getting profile page
 router.get("/profile", (req,res)=> {
   if(req.session.user) {
@@ -254,3 +271,4 @@ router.get('/logout', (req, res, next) => {
 });
 
 module.exports = router;
+
